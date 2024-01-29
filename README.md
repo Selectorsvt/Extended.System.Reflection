@@ -9,3 +9,8 @@ IEnumerable<Type> GetInheritedTypes<T>(this Assembly[] assemblies)
 bool IsInherited(this Type type, Type inheritedType)
 bool IsInherited<T>(this Type type)
 ```
+## Expression extensions:
+```C#
+string GetPropertyName<TSource, TProperty>(this Expression<Func<TSource, TProperty>> propertyLambda)
+PropertyInfo GetPropertyInfo<TSource, TProperty>(Expression<Func<TSource, TProperty>> propertyLambda)
+```
