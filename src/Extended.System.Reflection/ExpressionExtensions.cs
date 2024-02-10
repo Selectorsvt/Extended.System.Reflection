@@ -29,7 +29,7 @@ namespace Extended.System.Reflection
         /// <param name="propertyLambda">The property lambda.</param>
         /// <exception cref="ArgumentException">Not valid expression.</exception>
         /// <returns>The prop info.</returns>
-        public static PropertyInfo GetPropertyInfo<TSource, TProperty>(Expression<Func<TSource, TProperty>> propertyLambda)
+        public static PropertyInfo GetPropertyInfo<TSource, TProperty>(this Expression<Func<TSource, TProperty>> propertyLambda)
         {
             if (propertyLambda.Body is not MemberExpression member)
             {
